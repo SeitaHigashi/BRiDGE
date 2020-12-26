@@ -30,8 +30,8 @@ async def ping(ctx):
     await ctx.send('pong')
 
 
-radnes_thread = threading.Thread(target=radnes.run, args=(radnes_token))
-reviecer_thread = threading.Thread(target=reviecer.run, args=(reviecer_token))
+radnes_thread = threading.Thread(target=radnes.run, args=(radnes_token,))
+reviecer_thread = threading.Thread(target=reviecer.run, args=(reviecer_token,))
 
 radnes_thread.start()
 reviecer_thread.start()
