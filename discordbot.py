@@ -30,4 +30,4 @@ async def ping(ctx):
 
 
 Radnes.run(Radnes_token)
-Reviecer.run(Radnes_token)
+Reviecer.run(Reviecer_token)
