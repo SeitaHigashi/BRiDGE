@@ -29,5 +29,5 @@ async def ping(ctx):
     await ctx.send('pong')
 
 
-Radnes.run(Radnes_token)
+#Radnes.run(Radnes_token)
 Reviecer.run(Reviecer_token)
