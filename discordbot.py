@@ -1,4 +1,5 @@
 import discord
+import sys
 import os
 import traceback
 import threading
@@ -18,4 +19,4 @@ async def on_message(message):
 
 radnes.run(radnes_token)
 
-return 0
+sys.exit(0)
