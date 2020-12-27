@@ -17,3 +17,5 @@ async def on_message(message):
         await message.channel.send("pong")
 
 radnes.run(radnes_token)
+
+return 0
