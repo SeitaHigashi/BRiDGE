@@ -7,13 +7,13 @@ import threading
 radnes = discord.Client()
 radnes_token = os.environ['RADNES_TOKEN']
 
-reviecer = discord.Client()
-reviecer_token = os.environ['REVIECER_TOKEN']
+#reviecer = discord.Client()
+#reviecer_token = os.environ['REVIECER_TOKEN']
 
-@radnes.event
-async def on_message(message):
-    if message.content == '/ping':
-        await message.channel.send('pong')
+#@radnes.event
+#async def on_message(message):
+    #if message.content == '/ping':
+        #await message.channel.send('pong')
 
 radnes.run(radnes_token)
 
