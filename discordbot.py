@@ -13,7 +13,7 @@ reviecer_token = os.environ['REVIECER_TOKEN']
 async def on_message(message):
     if message.author.bot:
         return
-    if message.content == "/ping"
+    if message.content == "/ping":
         await message.channel.send("pong")
 
 radnes.run(radnes_token)
