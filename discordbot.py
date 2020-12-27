@@ -2,7 +2,7 @@ import discord
 import sys
 import os
 # import traceback
-# import threading
+import threading
 
 radnes = discord.Client()
 radnes_token = os.environ['RADNES_TOKEN']
@@ -20,7 +20,10 @@ async def on_message(message):
     if message.content == '/ping':
         await message.channel.send('pong')
         
-radnes.run(radnes_token)
-reviecer.run(reviecer_token)
+radnes_thread = threading.Thread(target=radnes.run, args=(radnes_token,))
+reviecer_thread = threading.Thread(target=reviecer.run, args=(reviecer_token,))
+
+radnes_thread.run()
+reviecer_thread.run()
 
 sys.exit(0)
