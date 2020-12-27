@@ -23,7 +23,10 @@ async def on_message(message):
 radnes_thread = threading.Thread(target=radnes.run, args=(radnes_token,))
 reviecer_thread = threading.Thread(target=reviecer.run, args=(reviecer_token,))
 
-radnes_thread.run()
-reviecer_thread.run()
+radnes_thread.start()
+reviecer_thread.start()
+
+radnes_thread.join()
+reviecer_thread.join()
 
 sys.exit(0)
